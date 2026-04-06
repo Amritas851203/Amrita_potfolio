@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: hsl(260, 80%, 65%);
+  --color-brand-secondary: hsl(190, 90%, 55%);
+  --color-brand-dark: hsl(230, 25%, 8%);
+  --color-brand-darker: hsl(230, 25%, 5%);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-darker text-white antialiased selection:bg-brand-primary/30;
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold text-white;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-20;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 transition-all duration-300;
+  }
+
+  .glass-nav {
+    @apply bg-brand-darker/60 backdrop-blur-md border-b border-white/10;
+  }
+
+  .heading-hero {
+    @apply text-4xl md:text-6xl font-bold leading-tight;
+  }
+
+  .text-paragraph {
+    @apply text-gray-400 text-base md:text-lg leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary hover:bg-brand-primary/80 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-primary/20;
+  }
+
+  .btn-secondary {
+    @apply border border-white/20 hover:bg-white/10 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95;
+  }
+
+  .glow-shadow {
+    box-shadow: 0 0 50px -12px var(--color-brand-primary);
+  }
+}
+
+/* Custom Utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-all;
+}
