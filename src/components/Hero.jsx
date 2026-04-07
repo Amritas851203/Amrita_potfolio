@@ -48,11 +48,11 @@ const Hero = () => {
           transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
           className="flex-1 relative"
         >
-          <div className="relative z-10">
+          <div className="relative z-10 w-full h-[400px] md:h-[500px]">
             <img 
-              src="/assets/amrita.jpg" 
+              src="/assets/amrita_first.jpg" 
               alt="Amrita Singh" 
-              className="rounded-3xl glow-shadow w-full h-[400px] md:h-[500px] object-cover"
+              className="rounded-3xl glow-shadow w-full h-full object-cover"
             />
           </div>
           {/* Background Decorative Glow */}

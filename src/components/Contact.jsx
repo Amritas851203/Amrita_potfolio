@@ -43,12 +43,12 @@ const Contact = () => {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="relative hidden md:block"
+             className="relative hidden md:block w-full h-[300px]"
           >
             <img 
-              src="/assets/amrita.jpg" 
+              src="/assets/amrita_last.jpg" 
               alt="Amrita Singh" 
-              className="rounded-3xl glow-shadow h-[300px] w-full object-cover grayscale opacity-50"
+              className="rounded-3xl glow-shadow w-full h-full object-cover"
             />
           </motion.div>
         </div>

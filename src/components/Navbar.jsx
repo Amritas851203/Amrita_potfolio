@@ -13,13 +13,14 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Ecosystems', href: '#ecosystems' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/#about' },
+    { name: 'Experience', href: '/#experience' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Ecosystems', href: '/#ecosystems' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Education', href: '/#education' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
