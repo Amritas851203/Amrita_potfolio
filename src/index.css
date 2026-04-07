@@ -53,6 +53,32 @@
   .glow-shadow {
     box-shadow: 0 0 50px -12px var(--color-brand-primary);
   }
+
+  /* Social Button Styles */
+  .social-btn {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl px-4 py-2 flex items-center gap-3 transition-all duration-300 hover:scale-105;
+  }
+
+  .social-btn-linkedin:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+  .social-btn-github:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .social-btn-instagram:hover {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+    border-color: rgba(236, 72, 153, 0.5);
+  }
+  .social-btn-whatsapp:hover {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    border-color: rgba(34, 197, 94, 0.5);
+  }
+  .social-btn-email:hover {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    border-color: rgba(168, 85, 247, 0.5);
+  }
 }
 
 /* Custom Utilities */

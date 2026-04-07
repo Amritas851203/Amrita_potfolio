@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   return (
@@ -34,10 +35,14 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col gap-8"
           >
-            <button className="btn-primary">View My Work</button>
-            <button className="btn-secondary">Contact Me</button>
+            <div className="flex flex-wrap gap-4">
+              <button className="btn-primary">View My Work</button>
+              <button className="btn-secondary">Contact Me</button>
+            </div>
+            
+            <SocialLinks />
           </motion.div>
         </div>
 

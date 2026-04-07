@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import SocialLinks from './SocialLinks';
 
 const Contact = () => {
   return (
     <section id="contact" className="section-container pb-32">
       <div className="flex flex-col md:flex-row gap-16 items-start">
         {/* Left: Contact Info & Visual */}
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full text-left">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: -0 }}
@@ -17,7 +18,7 @@ const Contact = () => {
             Let's Build Your <span className="text-brand-primary">Ecosystem</span>
           </motion.h2>
           
-          <div className="space-y-6 mb-12 text-left">
+          <div className="space-y-6 mb-12">
             {[
               { icon: <Mail />, text: 'amritasingh38381@gmail.com' },
               { icon: <MapPin />, text: 'Delhi, India' }
@@ -37,6 +38,17 @@ const Contact = () => {
               </motion.div>
             ))}
           </div>
+            
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mb-12"
+          >
+            <p className="text-sm font-bold uppercase tracking-widest text-brand-secondary/70 mb-4">Connect with me</p>
+            <SocialLinks />
+          </motion.div>
 
           {/* Visual Asset (MANDATORY) */}
           <motion.div
