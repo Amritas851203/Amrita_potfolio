@@ -50,7 +50,11 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-container section-alt scroll-mt-20">
+    <section
+      id="contact"
+      className="section-container section-alt scroll-mt-20"
+      style={{ paddingTop: '1.75rem' }}
+    >
       <div className="flex flex-col lg:flex-row gap-14 lg:gap-20 items-start">
         {/* Left: Info */}
         <div className="flex-1 w-full text-left">

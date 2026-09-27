@@ -37,7 +37,11 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="section-container scroll-mt-20">
+    <section
+      id="education"
+      className="section-container scroll-mt-20"
+      style={{ paddingTop: '1.5rem', paddingBottom: '1.5rem' }}
+    >
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
