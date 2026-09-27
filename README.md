@@ -1,16 +1,66 @@
-# React + Vite
+# Amrita Portfolio - Full Stack Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern full-stack portfolio application with a React + Vite frontend and a Node.js + Express backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Structure
 
-## React Compiler
+```text
+Amrita_potfolio/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   └── .gitignore
+│
+├── backend/
+│   ├── src/
+│   │   └── server.js
+│   ├── package.json
+│   └── .gitignore
+│
+└── README.md
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Frontend Setup
+
+Navigate to the `frontend` folder and install dependencies:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend will run on [http://localhost:5173](http://localhost:5173) (or next available Vite port).
+
+### 2. Backend Setup
+
+Navigate to the `backend` folder and install dependencies:
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+The backend server will run on [http://localhost:5000](http://localhost:5000).
+
+#### Health Check Endpoint
+- **URL**: `GET http://localhost:5000/api/health`
+- **Response**:
+```json
+{
+  "success": true,
+  "message": "Backend is running"
+}
+```

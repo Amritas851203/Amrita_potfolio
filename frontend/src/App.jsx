@@ -28,7 +28,7 @@ const Home = () => (
 
 function App() {
   return (
-    <div className="bg-brand-darker text-white min-h-screen">
+    <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <main>
         <Routes>
