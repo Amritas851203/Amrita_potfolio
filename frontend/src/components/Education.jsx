@@ -10,7 +10,6 @@ const Education = () => {
       institution: 'GGSIPU',
       scoreLabel: 'CGPA',
       scoreValue: '9.3',
-      isHighlight: true,
       icon: <GraduationCap size={22} />,
       detail: 'Pursuing core Information Technology curriculum with emphasis on full-stack development, software engineering, and database systems.',
     },
@@ -20,7 +19,6 @@ const Education = () => {
       institution: 'CBSE Board',
       scoreLabel: 'Score',
       scoreValue: '82%',
-      isHighlight: false,
       icon: <Award size={22} />,
       detail: 'Completed senior secondary education with focus on Mathematics, Physics, and Computer Science foundation.',
     },
@@ -30,7 +28,6 @@ const Education = () => {
       institution: 'CBSE Board',
       scoreLabel: 'Score',
       scoreValue: '91.6%',
-      isHighlight: false,
       icon: <BookOpen size={22} />,
       detail: 'Completed secondary schooling with academic distinction and consistent performance across all coursework.',
     },
@@ -66,19 +63,15 @@ const Education = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.08, duration: 0.4 }}
-            className={`card flex flex-col justify-between ${
-              edu.isHighlight ? 'ring-1 ring-[#5B4BDB]/30 bg-gradient-to-b from-white to-[#FAF9FF]' : ''
-            }`}
+            className="card flex flex-col justify-between"
             style={{ padding: '1.5rem' }}
           >
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
+                {/* Icon */}
                 <div
                   className="flex items-center justify-center w-11 h-11 rounded-xl flex-shrink-0"
-                  style={{
-                    backgroundColor: edu.isHighlight ? '#EDE9FF' : '#F3F4F6',
-                    color: edu.isHighlight ? '#5B4BDB' : '#374151',
-                  }}
+                  style={{ backgroundColor: '#F3F4F6', color: '#374151' }}
                 >
                   {edu.icon}
                 </div>
@@ -86,19 +79,12 @@ const Education = () => {
                 {/* Score Badge */}
                 <div
                   className="px-3 py-1 rounded-lg text-right"
-                  style={{
-                    backgroundColor: edu.isHighlight ? '#EDE9FF' : '#F9FAFB',
-                    border: edu.isHighlight ? '1px solid #DDD6FE' : '1px solid #E5E7EB',
-                  }}
+                  style={{ backgroundColor: '#F9FAFB', border: '1px solid #E5E7EB' }}
                 >
                   <span className="text-[10px] uppercase font-bold text-gray-400 block tracking-wider leading-none">
                     {edu.scoreLabel}
                   </span>
-                  <span
-                    className={`text-base font-extrabold leading-tight block mt-0.5 ${
-                      edu.isHighlight ? 'text-[#5B4BDB]' : 'text-gray-900'
-                    }`}
-                  >
+                  <span className="text-base font-extrabold leading-tight block mt-0.5 text-gray-900">
                     {edu.scoreValue}
                   </span>
                 </div>
