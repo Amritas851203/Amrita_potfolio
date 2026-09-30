@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, MessageCircle, Github, Linkedin, Instagram, CheckCircle2 } from 'lucide-react';
+import { Send, Mail, MapPin, MessageCircle, Github, Linkedin, Instagram, Twitter, CheckCircle2 } from 'lucide-react';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -46,6 +46,12 @@ const Contact = () => {
       value: '@amrita_singh.leads',
       href: 'https://www.instagram.com/amrita_singh.leads',
       icon: <Instagram size={18} />,
+    },
+    {
+      label: 'X (Twitter)',
+      value: '@Amrita8512',
+      href: 'https://x.com/Amrita8512',
+      icon: <Twitter size={18} />,
     },
   ];
 
