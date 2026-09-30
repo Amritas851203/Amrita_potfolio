@@ -143,16 +143,16 @@ const Contact = () => {
           className="flex-1 w-full"
         >
           <div
-            className="bg-white rounded-2xl p-7 sm:p-8"
+            className="bg-white rounded-2xl p-6 sm:p-7"
             style={{ border: '1px solid #E5E7EB', boxShadow: '0 4px 24px rgba(0,0,0,0.04)' }}
           >
             <h3
-              className="text-lg text-gray-900 mb-2"
+              className="text-lg text-gray-900 mb-1.5"
               style={{ fontWeight: 700 }}
             >
               Send a Direct Message
             </h3>
-            <p className="text-xs text-gray-400 mb-6">
+            <p className="text-xs text-gray-400 mb-5">
               Fill in your details below and I will respond to your email promptly.
             </p>
 
@@ -169,7 +169,7 @@ const Contact = () => {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
                 <div>
                   <label className="form-label">Full Name</label>
                   <input
@@ -195,7 +195,7 @@ const Contact = () => {
                 <div>
                   <label className="form-label">Message</label>
                   <textarea
-                    rows="4"
+                    rows="3"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -205,13 +205,81 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="btn-primary w-full mt-2"
+                  className="btn-primary w-full mt-1"
                 >
                   <Send size={16} /> Send Message
                 </button>
               </form>
             )}
           </div>
+
+          {/* ── Quick Info Strip ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.28, duration: 0.4 }}
+            className="mt-3"
+          >
+            {/* Availability + response row */}
+            <div className="flex items-center justify-between flex-wrap gap-2 px-1 mb-2">
+              <div className="flex items-center gap-1.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span className="text-xs font-semibold text-gray-600">Available for opportunities</span>
+              </div>
+              <span className="text-xs text-gray-400 flex items-center gap-1">
+                ⚡ Responds within <strong className="text-gray-600 ml-0.5">24 hours</strong>
+              </span>
+            </div>
+
+            {/* 3 stat chips - increased size */}
+            <div className="grid grid-cols-3 gap-2.5">
+              {[
+                { emoji: '🎓', value: '9.3', label: 'CGPA' },
+                { emoji: '💼', value: '2+', label: 'Internships' },
+                { emoji: '🚀', value: '3+', label: 'Projects' },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center py-2.5 px-1.5 rounded-xl"
+                  style={{ backgroundColor: '#F8F7FF', border: '1px solid rgba(91,75,219,0.1)' }}
+                >
+                  <span className="text-lg leading-none mb-1">{s.emoji}</span>
+                  <span className="text-base font-extrabold leading-tight" style={{ color: '#5B4BDB' }}>{s.value}</span>
+                  <span className="text-[10.5px] text-gray-400 font-medium leading-none">{s.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* ── Why Work With Me ── */}
+            <div className="mt-3.5 pt-3 border-t border-gray-100">
+              <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2.5">
+                Why Work With Me
+              </p>
+              <div className="space-y-2 text-[13px] sm:text-[13.5px] text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span>⚡</span>
+                  <span>Fast learner — adapts quickly to new tech stacks</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🎯</span>
+                  <span>Detail-oriented with clean, maintainable code</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🤝</span>
+                  <span>Team player with strong communication skills</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🚀</span>
+                  <span>Passionate about building impactful products</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
         </motion.div>
       </div>
     </section>
